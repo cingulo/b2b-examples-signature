@@ -13,6 +13,7 @@ $ pip install cryptography
 
 Após instalado podemos criptografar os dados:
 ```
+from cryptography.fernet import Fernet
 signature_token = 'bk7SwmpUmLoLosRBaQlQTSTgiK4eVVHf4nddgrrG-Is='  # Esse token é fornecido pela Cingulo
 fernet = Fernet(signature_token)
 data = {"bid": "@@123456ABCDE@@", "e1": "extra field 1", "e2": "extra field 2", "e3": "extra field 3", "e4": "extra field 4", "e5": "extra field 5"}
